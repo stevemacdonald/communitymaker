@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="card">
+  <img class="card-img-top" src="<%= @profile.profile_pic %>" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title"><%= @profile.full_name %></h4>
+    <p class="card-text"><%= @profile.bio %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= @profile.phone %></li>
+    <li class="list-group-item"><%= @profile.dob %></li>
+    <li class="list-group-item"><%= @profile.user.email %></li>
+    ISO3166::Country[@profile.country]
+
+
+  </ul>
+  <div class="card-block">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+
+  <div class="card-block">
+    <% if @profile.user == current_user %>
+    <%= link_to 'Edit profile', edit_profile_path(@profile), class: 'btn btn-primary btn-sm' %>
+    <% end %>
+  </div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

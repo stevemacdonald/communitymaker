@@ -1,0 +1,28 @@
+<table>
+  <h1>Admin</h1>
+
+  <h2>Users</h2>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Admin</th>
+
+      <th></th>
+
+      <% @users.each do |user| %>
+
+
+  <tr>
+    <td> <% link_to user.profile.full_name, profile_path(user.profile) %></td>
+    <td><% user.email %> </td>
+    <td><% user.profile.phone %> </td>
+    <td><% user.email %> </td>
+
+    <td> <%= link_to 'Make admin', 'make_admin/' + user.id.to_s, class: 'btn btn-info' %></td>
+
+    <td><% link_to 'Delete user', user, method: :delete, data: {confirm: 'Are you sure?'} %> </td>
+  </tr>
+  <% end %>
+</table>

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: stevemac
+  api_key: '714249476158717'
+  api_secret: TNgW7DSacPupt4fDKz4XWRnWwig
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: stevemac
+  api_key: '714249476158717'
+  api_secret: TNgW7DSacPupt4fDKz4XWRnWwig
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: stevemac
+  api_key: '714249476158717'
+  api_secret: TNgW7DSacPupt4fDKz4XWRnWwig
+  enhance_image_tag: true
+  static_image_support: false
